@@ -2,6 +2,7 @@
 :root {
     color-scheme: dark light;
     --light: #fff;
+    --accent: #64d59c;
     --dark: #08816d;
 }
 
@@ -12,7 +13,7 @@
 
 html {
     border-style: solid;
-    border-width: 10px 0 0 0;
+    border-width: 20px 0 0 0;
     border-color: var(--light);
 }
 
@@ -23,7 +24,7 @@ html, button, input {
 body {
     background-color: var(--dark);
     margin: 0;
-    max-width: 800px;
+    max-width: 1100px;
     padding: 0 20px 20px 20px;
     line-height: 1.4em;
     font-family: 'Roboto', sans-serif;
@@ -34,7 +35,7 @@ body {
 img {
     margin-top: 5px;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 60px;
 }
 
 pre {
@@ -51,13 +52,15 @@ a {
 }
 
 a:hover {
-  color: rgb(252, 235, 44);
+  color: var(--accent);
 }
 
 h1 {
   font-family: 'Kanit', sans-serif;
   font-size: 60px;
   font-weight: 600;
+  border-bottom: 40px;
+  line-height: 1.5;
 }
 
 @media only screen and (min-width: 600px) {
@@ -72,15 +75,38 @@ h1 {
 
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.column {
+.col1 {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
+  margin-right: 20px;
 }
+
+.col2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 800px){
+  .row{
+    flex-direction: row;
+  }
+  .col1{
+    flex: 3;
+    width: 75%;
+
+  }
+  .col2{
+    flex: 2;
+    width: 25%;
+
+  }
+}
+  
 
