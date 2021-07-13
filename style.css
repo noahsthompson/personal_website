@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Roboto&display=swap');
+:root {
+    color-scheme: dark light;
+    --light: #fff;
+    --dark: #08816d;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--light);
+}
+
+html {
+    border-style: solid;
+    border-width: 10px 0 0 0;
+    border-color: var(--light);
+}
+
+html, button, input {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    margin: 0;
+    max-width: 800px;
+    padding: 0 20px 20px 20px;
+    line-height: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: var(--light);
+}
+
+img {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+pre {
+    overflow: auto;
+}
+
+p {
+  margin: 5px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgb(252, 235, 44);
+}
+
+h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 600px) {
+    ul {
+        column-count: 2;
+    }
+    body {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
